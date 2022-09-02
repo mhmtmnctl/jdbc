@@ -5,7 +5,7 @@ import java.sql.*;
 public class Execute02 {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         Class.forName("org.postgresql.Driver");
-        Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Techpro", "postgres", "635453r522");
+        Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Techpro", "postgres", "1234");
         Statement st = con.createStatement();
 
         //1. Example:  region id'si 1 olan "country name" değerlerini çağırın.
@@ -16,6 +16,7 @@ public class Execute02 {
         while(result1.next()) //veri olduğu sürece
         {
             System.out.println(result1.getString("country_name"));
+         //   System.out.println(result1.getString(1)); bu şekilde 1.indexdeki bilgileri getircek table'dan
         }
 
         //2.Örnek: "region_id"nin 2'den büyük olduğu "country_id" ve "country_name" değerlerini çağırın.

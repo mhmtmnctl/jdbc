@@ -13,7 +13,7 @@ public class Execute01 {
         Class.forName("org.postgresql.Driver"); //önce driver ekledik
 
         //2.adım Databas'e bağlan
-        Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Techpro", "postgres", "635453r522");
+        Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Techpro", "postgres", "1234");
 
         //3.adım: statement oluştur
         Statement st = con.createStatement();
@@ -30,7 +30,7 @@ public class Execute01 {
         st.execute(sql2);
         ////3.Örnek: Drop workers table
         String sql3 = "DROP TABLE workers";
-      //  st.execute(sql3);
+        st.execute(sql3);
 
         //5.adım: bağlantı ve statement'ı kapat
         con.close();//connnection kapatıldı
